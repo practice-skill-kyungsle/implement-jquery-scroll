@@ -15,11 +15,11 @@
 ## 어떻게 구현이 되었는가?
 
 
-모바일 버전
 
-https://github.com/keinn51/practice_skill/assets/79993356/dc71f4a2-318b-4d14-9d7c-623520d24186
+https://github.com/practice-skill-kyungsle/implement-jquery-scroll/assets/79993356/b7a20413-c8d9-46c8-8c04-1a095c74df98
 
-데스크톱 버전
 
-https://github.com/keinn51/practice_skill/assets/79993356/b93fd64e-17e5-4a1f-9542-e2a61dc1513b
+https://github.com/practice-skill-kyungsle/implement-jquery-scroll/assets/79993356/7fd8ed1b-654c-41d8-9bde-2ba6746e2a69
+
+
 
