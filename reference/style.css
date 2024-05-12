@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+  --blue: #102770;
+  --yellow: #ffeba7;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+::selection {
+  color: var(--yellow);
+  background-color: var(--blue);
+}
+::-moz-selection {
+  color: var(--yellow);
+  background-color: var(--blue);
+}
+body{
+	background-color: var(--blue);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 400vh;
+  font-family: 'Roboto', sans-serif;
+}
+.section-text-scroll {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: block;
+  z-index: 100;
+  text-align: center;
+  pointer-events: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 3px; 
+  font-weight: 900; 
+  color: var(--yellow);
+}
+.section-text-scroll span {
+  display: block;
+  animation: scroll 1.6s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.section-text-center {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: block;
+  z-index: 1;
+  margin: 0 auto;
+  text-align: center;
+}
+#container-c { 
+  margin: 0 auto;
+  text-align: center;
+  position: relative; 
+  width: 240px; 
+  overflow: hidden; 
+  display: inline-block; 
+  transform: rotate(89deg);
+}
+#circle { 
+  position: relative; 
+  width: 100%; 
+  padding-bottom: 100%; 
+  overflow: hidden; 
+}
+#circle text { 
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+  font-weight: 700; 
+  letter-spacing: 4.6px; 
+  fill: var(--yellow);
+}
+#circle svg { 
+  position: absolute; 
+  left: -40%; 
+  top: -40%; 
+  width: 180%; 
+  height: 180%;
+}
+
+.progress-wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px; 
+  height: 250px;
+  display: block;
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
+  transition: all 200ms linear;
+}
+.progress-wrap svg { 
+  width: 224px; 
+  height: 224px;
+  margin-top: 13px;
+  margin-left: 13px;
+  transform: rotate(-10deg);
+}
+.progress-wrap svg path { 
+  fill: none; 
+}
+.progress-wrap svg.progress-circle path {
+  stroke: var(--blue);
+  stroke-width: 18;
+  box-sizing:border-box;
+  transition: all 200ms linear;
+}
+.logo {
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	display: block;
+	z-index: 1000;
+}
+.logo img {
+	height: 26px;
+	width: auto;
+	display: block;
+}
+.logo:before {
+  display: none;
+}

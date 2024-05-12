@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <title>Jquery Scroll</title>
+    <style>
+        body {
+            /* height: 3500px; */
+        }
+        .pc-content {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-content-intro {
+            position: sticky;
+            top: 0px;
+        }
+
+        .main-text_video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-text_video {
+            width: 860px;
+        }
+        .main-preview {
+            position: relative;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .main-preview-contents {
+            position: sticky;
+            width: 1000px;
+            margin: 110px 0 140px 0;
+            box-shadow: 10px 20px 50px 0px rgb(189, 176, 169, 0.54);
+        }
+        .main-preview-image {
+            width: 100%;
+        }
+        .main-preview-sidebar-top {
+            position: absolute;
+            opacity: 0;
+        }
+        .main-preview-sidebar-left {
+            position: absolute;
+            box-shadow: 10px 20px 50px 0px rgb(189, 176, 169, 0.54);
+            opacity: 0;
+        }
+        .main-preview-popup-left {
+            position: absolute;
+            box-shadow: 10px 20px 40px 0px rgb(189, 182, 178, 0.68);
+            opacity: 0;
+        }
+        .main-preview-popup-right {
+            position: absolute;
+            box-shadow: 10px 20px 40px 0px rgb(189, 182, 178, 0.68);
+            opacity: 0;
+        }
+        .main-preview-target {
+            position: absolute;
+            opacity: 0;
+        }
+
+        @media (max-width: 1000px) {
+            .main-text_video {
+                width: calc(100% * (43/50));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-preview-contents {
+                position: relative;
+                margin: unset;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .main-preview-contents {
+                width: calc(100% * (5/7));
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="pc-content">
+        <div class="temp" style="height: 400px; background: gold"></div>
+        <div class="main-container">
+            <div class="main-content-intro">
+                <div class="main-text_video-container">
+                    <video class="main-text_video" autoplay muted loop playsinline>
+                        <source src="./realreal.mp4">
+                    </video>
+                </div>
+                <div class="main-preview">
+                    <div class="main-preview-contents">
+                        <img class="main-preview-image" src="./img/main_image.jpg" alt="none">
+                        <img class="main-preview-sidebar-top" src="./img/main_side_top.jpg" alt="none">
+                        <img class="main-preview-sidebar-left" src="./img/main_side_left.jpg" alt="none">
+                        <img class="main-preview-target" src="./img/main_target.png" alt="none">
+                        <img class="main-preview-popup-left" src="./img/main_pop_left.jpg" alt="none">
+                        <img class="main-preview-popup-right" src="./img/main_pop_right.jpg" alt="none">
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+   <script src="./scroll_rock.js"></script>
+</body>
+</html>
